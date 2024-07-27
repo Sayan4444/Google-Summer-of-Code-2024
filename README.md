@@ -38,7 +38,8 @@ nvm alias default 14
 ``` 
 - Install the `CodeTour` extension from VsCode extensions
 
-IMAGE
+![Codetour extension](https://github.com/user-attachments/assets/06f30109-4818-47c3-a084-70bca9e8dd58)
+
 
 - if cloned for the repo for the first time, install the node_modules
 ```bash
@@ -52,7 +53,7 @@ yarn tours
 
 - Starting Tours:- Use `ctrl+shift+p` / `cmd+shift+p` to open all commands and then select the start tour option
 
-VIDEO
+https://github.com/user-attachments/assets/d3282488-cac1-4fd3-840f-5fee5c13539a
 
 ### 🚢 Tours Available
 
