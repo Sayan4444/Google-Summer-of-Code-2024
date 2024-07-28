@@ -28,6 +28,7 @@ The following are the Deliverables
 **All of the targets were completed during the GSOC period✨**
 
 ## ⚒  Setup Instructions and Demo
+- Clone the project repository - [link](https://github.com/Sayan4444/Rocket.Chat/tree/codetours)
 - It is important to use node.js version 14, check your nodejs version by
 ```bash
 node -v
@@ -41,7 +42,7 @@ nvm alias default 14
 ![Codetour extension](https://github.com/user-attachments/assets/06f30109-4818-47c3-a084-70bca9e8dd58)
 
 
-- if cloned for the repo for the first time, install the node_modules
+- Install node_modules
 ```bash
 yarn
 ```
