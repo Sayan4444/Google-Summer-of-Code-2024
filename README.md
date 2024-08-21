@@ -1,7 +1,7 @@
 <div align="center">
        <h1> 
         <p>
-          <a href="https://github.com/Sayan4444/Rocket.Chat/tree/codetours">Graphical Guided Codetour</a> </a> for <a href="https://rocket.chat/">Rocket.Chat</a>
+          <a href="https://github.com/RocketChat/RC.Guided.Tours">Graphical Guided Codetour</a> </a> for <a href="https://rocket.chat/">Rocket.Chat</a>
         </p>
       </h1>
     <a href="https://summerofcode.withgoogle.com/projects/#6521788818784256"><img src="https://i.imgur.com/pgkUceb.png" width="650" alt="google-summer-of-code"></a>
@@ -9,54 +9,31 @@
 </div>
 <br>
 
+### Project [link](https://github.com/RocketChat/RC.Guided.Tours)
+
 ## ⭐ Project Abstract
 
 `Graphical Guided RC Code Tours` helps new contributors kickstart their open-source journey with rocket.chat.
 
 VS Code comes with a CodeTour Extension, and with its help, any person can quickstart their journey by going through all the tours, instead of reading the complete documentation. It is something like someone with a handholding harness that explains the code in the editor while going through multiple steps in **Exact File And Exact Line**. 
 
-This project involves the development of a set of guided tutorials with diagrams and flowcharts helping new developers to understand the codebase quickly and start contributing. The ever evolving nature of Rocket.Chat posses a challenge to us, thus we also have created a script to generate these .tours files dynamically.
+This project involves the development of a set of guided tutorials with diagrams and flowcharts helping new developers to understand the codebase quickly and start contributing.
 
- Yearly more than 500 contributors show interest in contributing to Rocket.Chat but more than 90% of them end up leaving their journey but we hope decrease this percentage exponential with the help of this project. In the coming years there will surely be an increase in contributors making worthy contributions to rocket.chat
+ Yearly more than 500 contributors show interest in contributing to Rocket.Chat but more than 90% of them end up leaving their journey but we hope decrease this percentage exponentially with the help of this project.
 
 ## ⚙️ Deliverables
 The following are the Deliverables
 - Added helpful diagrams, flowchart, edited old tours  and created new tours
-- Created a script to dynamically generate the .tours file
-- Set of 11 essential tours which is enough to make any contributor or developer familiar with the codebase
+- Created a node.js script to dynamically generate the .tours file attaching all tours steps to their approriate line number.
+- Created set of 11 tours to make any contributor or developer familiar with the codebase
 
 **All of the targets were completed during the GSOC period✨**
 
-## ⚒  Setup Instructions and Demo
-- Clone the project repository - [link](https://github.com/Sayan4444/Rocket.Chat/tree/codetours)
-- It is important to use node.js version 14, check your nodejs version by
-```bash
-node -v
-``` 
-- If using nvm, do set the default to 14.
-```bash
-nvm alias default 14
-``` 
-- Install the `CodeTour` extension from VsCode extensions
+## ⚒  Demo Video
+- https://youtu.be/pRZUPZK5LCA
+- Do read the [project readme](https://github.com/RocketChat/RC.Guided.Tours?tab=readme-ov-file#rcguidedtours-for-rocketchat) to setup the project and give an honest feedback in this [channel](https://open.rocket.chat/channel/RC-Guided-Tours).
 
-![Codetour extension](https://github.com/user-attachments/assets/06f30109-4818-47c3-a084-70bca9e8dd58)
-
-
-- Install node_modules
-```bash
-yarn
-```
-and then generate the .tours folder
-```bash
-yarn tours 
-``` 
-- The CodeTour Extension searches for a folder with a certain name i.e. `.tours` and all the tours created are stored inside the `.tours` folder in JSON format. and Each file inside the .tours folder contains data about the tour including Line Numbers, file and folder names and explanations, ***To know more about the CodeTour extension visit [here](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)***
-
-- Starting Tours:- Use `ctrl+shift+p` / `cmd+shift+p` to open all commands and then select the start tour option
-
-https://github.com/user-attachments/assets/d3282488-cac1-4fd3-840f-5fee5c13539a
-
-### 🚢 Tours Available
+### 🚢 Available CodeTours
 
 <div align="center">
     
@@ -88,23 +65,44 @@ Do Checkout my Linkedin Posts regarding GSOC
     
 </div>
 
+## 🤯 Problems That I Faced During GSOC
+### Understanding Codebase
+
+In order to create or edit any tour, the first requirement was to have a good understanding of the Codebase and different tech stacks used by rocket.chat, I spent a good amount of time learning about different APIs, methods used in rocket.chat and solved serveral issues making [10+ merged Pull Reqeusts](https://github.com/search?q=type%3Apr+author%3ASayan4444+is%3Amerged+created%3A%3E%3D2023-11-20+repo%3ARocketChat%2FRocket.Chat+repo%3ARocketChat%2FRocket.Chat.Electron+repo%3ARocketChat%2FDocker.Official.Image+repo%3ARocketChat%2FRocket.Chat.ReactNative+repo%3ARocketChat%2FRocket.Chat.js.SDK+repo%3ARocketChat%2FRocket.Chat.py.SDK+repo%3ARocketChat%2FRocket.Chat.Livechat+repo%3ARocketChat%2FRocket.Chat.Embedded.arm64+repo%3ARocketChat%2FRocket.Chat.Embedded.armhf+repo%3ARocketChat%2Falexa-rocketchat+repo%3ARocketChat%2FOpensource-Contribution-Leaderboard+repo%3ARocketChat%2FApps.GitHub+repo%3ARocketChat%2Ffuselage+repo%3ARocketChat%2Falexa-rocketchat-notification+repo%3ARocketChat%2Falexa-rocketchat-flashbriefing+repo%3ARocketChat%2Falexa-news-publisher+repo%3ARocketChat%2Falexa-rc-multiserver-client+repo%3ARocketChat%2FApps.Rasa+repo%3ARocketChat%2FApps.Dialogflow+repo%3ARocketChat%2FRC4Github+repo%3ARocketChat%2Frocket.chat.app-poll+repo%3ARocketChat%2Fdeveloper-docs+repo%3ARocketChat%2FRC4Community+repo%3ARocketChat%2FRC4Conferences+repo%3ARocketChat%2FApps.Github22+repo%3ARocketChat%2FEmbeddedChat+repo%3ARocketChat%2FRocket.Chat.Demo.App+repo%3ARocketChat%2Fdocs+repo%3ARocketChat%2FApps.Notion+repo%3ARocketChat%2FApps.Whiteboard+-label%3Achore&type=pullrequests)
+
+### Dynamic Codebase
+A significant challenge developers encountered when creating tours with CodeTours is the ever-evolving nature of the codebase. To ensure the smooth functioning of the tours, one had to regularly review and adapt them to accommodate these ongoing changes.
+
+To solve this issue I created a node.js script which one needs to execute to dynamically generating the tours assigning them to their appropriate line numbers according to the present status of the codebase. 
+
+*How I did it?*
+
+I am using a very basic string search algorithm, i.e. each tours needs to search a unique string on which the tour will be assigned to. One may argue that what if the searchString changes. This is a valid point but since in Rocket.Chat CodeTours is used to describe the core part of the codebase, the searchString assigned is very unlikely to change and something really major might have happened if it does.
+
+### Executing the node.js script
+For the node.js script to execute it needs access of the Rocket.Chat codebase. So initially I made a npm-script in the main codebase, which on running will download the node.js script and run it to generate the tours. But later we got a strict instruction that nothing can be merged in the main codebase and this project must act `independently`
+
+I replaced the npm-script with a manual shell script but we still were generating the .tours folder as well as the node.js script which must be .gitignored. But cant make any changes in the main repository.
+
+This is the overall architecture which we had to achieve. 
+
+![image](https://github.com/user-attachments/assets/5834ab00-a782-423c-a16f-d1ee720c3371)
+
+*How I solved it?*
+
+Our main objective was to prevent the .tours folder or our node.js script to be mistakenly pushed while making a contribution and thus must be gitignored. So inside the shell script I added a command to add these two folders inside the `.git/info/exclude` file thus acting same like gitignore but for the local repository only.
+
+
+### Making the tours interactive and fun
+
+Its well known that how interesting the texts are for developers, its very boring to read only texts. I tried spice things up by adding some images but in most of the tours, the content is so well written written like adding an image is unecessarey.
+
 ## 🎓 Mentors
 
 I would like to express my heartfelt gratitude to my mentor, Aditya Singh, without whom this journey would not have been this smooth. His unwavering support and guidance helped me grow both professionally and as a person.  We held one productive meeting each week discussing the progress in that week and targets for the next week. We were also connected via chat and call,I can call and chat any time. I am so grateful for the faith and support he showed for me within this GSOC period.
 
 
 - **Aditya Singh** - [Github](https://github.com/AdityaSingh-02) [LinkedIn](https://www.linkedin.com/in/aditya-singh-76065422b/)
-
-## 🤯 Problems That I Faced During GSOC
-
-### 😕 Understanding Codebase
-
-In order to create or edit any tour, the first requirement was to have a good understanding of the Code and different tech stacks used by rocket.chat, I spent a good amount of time learning about different APIs and methods used in rocket.chat
-
-### ⛑️ Making the tours interactive and fun
-
-Its well known that how interesting the texts are, its very boring to read only texts. I tried spice things up by adding some images but in most of the tours, the content is written like adding an image is unecessarey.
-
 
 ## 💬 Connect With Me    
 I am 3rd year student at NIT Durgapur studying CSE and an upcoming Google SWE Summer Intern 2025. Want to discuss GSOC / OPEN SOURCE / DSA or how to increase your CGPA?? Lets connect!! 
