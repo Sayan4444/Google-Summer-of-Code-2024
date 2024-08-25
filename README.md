@@ -30,7 +30,7 @@ The following are the Deliverables
 **All of the targets were completed during the GSOC period✨**
 
 ## ⚒  Demo Video
-- [](https://github.com/user-attachments/assets/44e2be20-43ea-4eb7-941d-e05aeaa8f95a)
+[](https://github.com/user-attachments/assets/44e2be20-43ea-4eb7-941d-e05aeaa8f95a)
 - Do read the [project readme](https://github.com/RocketChat/RC.Guided.Tours?tab=readme-ov-file#rcguidedtours-for-rocketchat) to setup the project and give an honest feedback in this [channel](https://open.rocket.chat/channel/RC-Guided-Tours).
 
 ### 🚢 Available CodeTours
