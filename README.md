@@ -30,7 +30,7 @@ The following are the Deliverables
 **All of the targets were completed during the GSOC period✨**
 
 ## ⚒  Demo Video
-- https://youtu.be/pRZUPZK5LCA
+- [](https://github.com/user-attachments/assets/44e2be20-43ea-4eb7-941d-e05aeaa8f95a)
 - Do read the [project readme](https://github.com/RocketChat/RC.Guided.Tours?tab=readme-ov-file#rcguidedtours-for-rocketchat) to setup the project and give an honest feedback in this [channel](https://open.rocket.chat/channel/RC-Guided-Tours).
 
 ### 🚢 Available CodeTours
@@ -71,35 +71,34 @@ Do Checkout my Linkedin Posts regarding GSOC
 In order to create or edit any tour, the first requirement was to have a good understanding of the Codebase and different tech stacks used by rocket.chat, I spent a good amount of time learning about different APIs, methods used in rocket.chat and solved serveral issues making [10+ merged Pull Reqeusts](https://github.com/search?q=type%3Apr+author%3ASayan4444+is%3Amerged+created%3A%3E%3D2023-11-20+repo%3ARocketChat%2FRocket.Chat+repo%3ARocketChat%2FRocket.Chat.Electron+repo%3ARocketChat%2FDocker.Official.Image+repo%3ARocketChat%2FRocket.Chat.ReactNative+repo%3ARocketChat%2FRocket.Chat.js.SDK+repo%3ARocketChat%2FRocket.Chat.py.SDK+repo%3ARocketChat%2FRocket.Chat.Livechat+repo%3ARocketChat%2FRocket.Chat.Embedded.arm64+repo%3ARocketChat%2FRocket.Chat.Embedded.armhf+repo%3ARocketChat%2Falexa-rocketchat+repo%3ARocketChat%2FOpensource-Contribution-Leaderboard+repo%3ARocketChat%2FApps.GitHub+repo%3ARocketChat%2Ffuselage+repo%3ARocketChat%2Falexa-rocketchat-notification+repo%3ARocketChat%2Falexa-rocketchat-flashbriefing+repo%3ARocketChat%2Falexa-news-publisher+repo%3ARocketChat%2Falexa-rc-multiserver-client+repo%3ARocketChat%2FApps.Rasa+repo%3ARocketChat%2FApps.Dialogflow+repo%3ARocketChat%2FRC4Github+repo%3ARocketChat%2Frocket.chat.app-poll+repo%3ARocketChat%2Fdeveloper-docs+repo%3ARocketChat%2FRC4Community+repo%3ARocketChat%2FRC4Conferences+repo%3ARocketChat%2FApps.Github22+repo%3ARocketChat%2FEmbeddedChat+repo%3ARocketChat%2FRocket.Chat.Demo.App+repo%3ARocketChat%2Fdocs+repo%3ARocketChat%2FApps.Notion+repo%3ARocketChat%2FApps.Whiteboard+-label%3Achore&type=pullrequests)
 
 ### Dynamic Codebase
-A significant challenge developers encountered when creating tours with CodeTours is the ever-evolving nature of the codebase. To ensure the smooth functioning of the tours, one had to regularly review and adapt them to accommodate these ongoing changes.
+A significant challenge developers encountered when using CodeTours is the ever-evolving nature of the codebase. To show a step, codetours assigns a line number to it, thus to ensure the smooth functioning of the tours, one had to regularly review and adapt them to accommodate these ongoing changes.
 
-To solve this issue I created a node.js script which one needs to execute to dynamically generating the tours assigning them to their appropriate line numbers according to the present status of the codebase. 
+To solve this issue I created a node.js script which  dynamically generates the .tours folder assigning appropriate line numbers for each steps of the tours according to the present status of the codebase.
 
 *How I did it?*
 
 I am using a very basic string search algorithm, i.e. each tours needs to search a unique string on which the tour will be assigned to. One may argue that what if the searchString changes. This is a valid point but since in Rocket.Chat CodeTours is used to describe the core part of the codebase, the searchString assigned is very unlikely to change and something really major might have happened if it does.
 
-### Executing the node.js script
-For the node.js script to execute it needs access of the Rocket.Chat codebase. So initially I made a npm-script in the main codebase, which on running will download the node.js script and run it to generate the tours. But later we got a strict instruction that nothing can be merged in the main codebase and this project must act `independently`
+### Merge issues with main codebase
+For the node.js script to execute it needs access of the Rocket.Chat codebase. So initially I made a npm-script in the main codebase, which on execution will generate the tours. But later we got a strict instruction that nothing can be merged in the main codebase and this project must act `independently`
 
-I replaced the npm-script with a manual shell script but we still were generating the .tours folder as well as the node.js script which must be .gitignored. But cant make any changes in the main repository.
-
-This is the overall architecture which we had to achieve. 
-
-![image](https://github.com/user-attachments/assets/5834ab00-a782-423c-a16f-d1ee720c3371)
 
 *How I solved it?*
 
-Our main objective was to prevent the .tours folder or our node.js script to be mistakenly pushed while making a contribution and thus must be gitignored. So inside the shell script I added a command to add these two folders inside the `.git/info/exclude` file thus acting same like gitignore but for the local repository only.
+I cam up with this architecture
+![image](https://github.com/user-attachments/assets/5834ab00-a782-423c-a16f-d1ee720c3371)
+
+
+Our main objective was to prevent the `.tours` and `RC.Guided.Tours` to be mistakenly pushed while making a contribution and thus must be gitignored. Since we cant make any change in the `.gitignore` file of the main repo, our shell scripts adds them inside `.git/info/exclude` file thus acting same like gitignore but for the local repository only.
 
 
 ### Making the tours interactive and fun
 
-Its well known that how interesting the texts are for developers, its very boring to read only texts. I tried spice things up by adding some images but in most of the tours, the content is so well written written like adding an image is unecessarey.
+Its well known that how boring it can be for developers to read texts. I tried spice things up by adding some images but in most of the tours, the content is so well written written like adding an image is unecessarey.
 
 ## 🎓 Mentors
 
-I would like to express my heartfelt gratitude to my mentor, Aditya Singh, without whom this journey would not have been this smooth. His unwavering support and guidance helped me grow both professionally and as a person.  We held one productive meeting each week discussing the progress in that week and targets for the next week. We were also connected via chat and call,I can call and chat any time. I am so grateful for the faith and support he showed for me within this GSOC period.
+I would like to express my heartfelt gratitude to my mentor, Aditya Singh, without whom this journey would not have been this smooth. His unwavering support and guidance helped me grow both professionally and as a person.  
 
 
 - **Aditya Singh** - [Github](https://github.com/AdityaSingh-02) [LinkedIn](https://www.linkedin.com/in/aditya-singh-76065422b/)
